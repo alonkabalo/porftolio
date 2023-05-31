@@ -17,6 +17,10 @@ nav {
   padding: 0 !important;
 }
 
+.nav-link:hover {
+  color: #1AE0EC !important;
+}
+
 .logo {
   font-family: "Satisfy", cursive;
 }
@@ -45,12 +49,7 @@ a.nav-link {
 
 .main {
   text-align: center;
-  background-image: linear-gradient(
-      45deg,
-      rgba(19, 232, 241, 0.3019607843),
-      rgba(19, 232, 241, 0.3019607843)
-    ),
-    url(assets/Image20230430153820.png);
+  background-image: linear-gradient(45deg, rgba(19, 232, 241, 0.3019607843), rgba(19, 232, 241, 0.3019607843)), url(images/Image20230430153820.png);
   background-size: cover;
   padding: 6rem !important;
   margin: 0 !important;
@@ -75,7 +74,7 @@ a.nav-link {
 
 .icons img:hover {
   scale: 1.1;
-} /*# sourceMappingURL=style.css.map */
+}
 
 .project {
   height: 500px;
@@ -100,7 +99,73 @@ a.nav-link {
   border-color: #0dcaf0;
 }
 
-.project-btn a{
+.project-btn a {
   text-decoration: none;
   color: #000;
+}
+
+#links {
+  display: flex;
+  background-color: #31d2f2;
+  text-align: center;
+  padding: 25px 0;
+  direction: ltr;
+}
+
+footer {
+  padding: 8px;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.col-sm-2 {
+  flex-direction: column;
+  display: flex;
+  gap: 9px;
+}
+
+.burger-menu {
+  width: 25px;
+  height: 20px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  top: 25px;
+  right: 15px;
+}
+
+.burger-menu div {
+  width: 100%;
+  height: 4px;
+  background-color: #333;
+}
+
+.burger-menu:hover div {
+  background-color: #555;
+}
+
+@media (max-width: 768px) {
+  .project .main-img {
+    width: 100%;
+  }
+  .burger-menu {
+    display: flex;
+  }
+  .navbar-nav {
+    display: none;
+  }
+}
+@media (max-width: 803px) {
+  .navbar-nav li {
+    margin: auto;
+  }
 }

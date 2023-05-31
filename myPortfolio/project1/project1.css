@@ -1,6 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Heebo:wght@200;300;400;500;600;700;900&family=Satisfy&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Heebo:wght@200;300;400;500;600;700;900&family=Varela+Round&display=swap");
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 html {
   height: 100%;
   display: flex;
@@ -13,6 +22,8 @@ body {
   direction: rtl;
   text-align: center;
   color: white;
+  animation: fadeIn 1s ease-in-out 1;
+  background-attachment: fixed;
 }
 
 h1 {
@@ -25,9 +36,8 @@ h1 {
   color: #ffffff;
   text-shadow: 0px 0px 36px #00000087;
   opacity: 1;
-  
-  
-
+  position: relative;
+  top: 35px;
 }
 
 h2 {
@@ -35,7 +45,6 @@ h2 {
   letter-spacing: 0px;
   color: #ffffff;
   opacity: 1;
-  
 }
 
 p {
@@ -58,6 +67,7 @@ label {
 .form-inline {
   display: flex;
   align-items: flex-end;
+  flex-wrap: wrap;
   gap: 30px;
   justify-content: center;
 }
@@ -65,7 +75,6 @@ label {
 .input-container {
   display: flex;
   flex-direction: column;
-  
 }
 
 input {
@@ -78,14 +87,47 @@ input {
 button {
   padding: 10px 60px;
   border: none;
-  background-color:#FFFFFF;
-  color:#1C1C1C;
+  background-color: #ffffff;
+  color: #1c1c1c;
   cursor: pointer;
   font: normal normal normal 16px/20px Varela Round;
-
-  
 }
 
 button:hover {
   background-color: #b9d7f8;
+}
+
+@media (max-width: 789px) {
+  h1 {
+    font-size: 6em;
+  }
+
+  h2 {
+    font-size: 27px;
+  }
+
+  p {
+    width: 350px;
+    margin: auto;
+    font-size: 16px;
+  }
+
+  .form-inline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+  }
+
+  .input-container {
+    width: 80%;
+  }
+
+  input {
+    padding: 10px 50px;
+  }
+  button {
+    padding: 10px 30px;
+    width: 80%;
+  }
 }
