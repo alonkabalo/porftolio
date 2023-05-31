@@ -50,6 +50,7 @@ form .field {
   margin-bottom: 20px;
 }
 form label {
+  font-size: 15px;
   display: block;
   text-align: right;
   font-weight: bold;
@@ -57,8 +58,8 @@ form label {
 form input {
   display: block;
   margin-top: 5px;
-  height: 30px;
-  width: 320px;
+  height: 36px;
+  width: 345px;
   border: 1px solid #d31c75;
 }
 
@@ -80,7 +81,7 @@ button {
   font-weight: bold;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 768px) {
   .background-div .myDiv {
     width: 80%;
     height: auto;

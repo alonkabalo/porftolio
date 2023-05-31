@@ -24,7 +24,7 @@ body {
 
 .background-div {
   height: 50vh;
-  background-image: url(../images/project-screenshots/Path\ 15.png);
+  background-image: url(/images/project-screenshots/Path\ 15.png);
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
@@ -60,6 +60,7 @@ form {
   }
 
   label {
+    font-size: 15px;
     display: block;
     text-align: right;
     font-weight: bold;
@@ -68,8 +69,8 @@ form {
   input {
     display: block;
     margin-top: 5px;
-    height: 30px;
-    width: 320px;
+    height: 36px;
+    width: 345px;
     border: 1px solid #d31c75;
     
   }
