@@ -53,12 +53,17 @@ a.nav-link {
 }
 
 .nav-link:hover {
-  color: #1AE0EC !important;
+  color: #1ae0ec !important;
 }
 
 .main {
   text-align: center;
-  background-image: linear-gradient(45deg, rgba(19, 232, 241, 0.3019607843), rgba(19, 232, 241, 0.3019607843)), url(images/Image20230430153820.png);
+  background-image: linear-gradient(
+      45deg,
+      rgba(19, 232, 241, 0.3019607843),
+      rgba(19, 232, 241, 0.3019607843)
+    ),
+    url(images/Image20230430153820.png);
   background-size: cover;
   padding: 10vw 6vw !important;
   margin: 0 !important;
@@ -175,7 +180,12 @@ a {
 }
 
 #contact {
-  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.4509803922), transparent), url(images/project-screenshots/Image20230502125311.png);
+  background-image: linear-gradient(
+      45deg,
+      rgba(0, 0, 0, 0.4509803922),
+      transparent
+    ),
+    url(images/project-screenshots/Image20230502125311.png);
   background-color: #3a3a3a;
   padding: 7em 5vw !important;
   margin: 0 !important;
@@ -183,6 +193,8 @@ a {
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: revert;
+   
+  
 }
 #contact form {
   margin: 32px 0;
@@ -228,6 +240,14 @@ footer {
   width: 100%;
   display: flex;
   justify-content: space-between;
+}
+
+
+
+.mail{
+  height: 400px;
+  width: 400px;
+  background-image: url(/images/project-screenshots/Image20230502125311.png);
 }
 
 @media (max-width: 768px) {
