@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;600;700;900&family=Satisfy&display=swap");
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+body {
+  direction: rtl;
+  font-family: "Heebo", sans-serif;
+  animation: fadeIn 2s;
+}
+
+nav {
+  padding: 0 !important;
+}
+.nav-link:hover {
+  color: #1AE0EC !important;
+}
+
+.logo {
+  font-family: "Satisfy", cursive;
+}
+
+.logo span {
+  margin-left: 8px;
+  font-size: 25px;
+  position: relative;
+  top: 8px;
+}
+
+.logo .icon {
+  height: 60px;
+  border-radius: 8px;
+}
+
+li.nav-item {
+  margin: 0 12px;
+}
+
+a.nav-link {
+  font-size: 20px;
+  font-weight: 600;
+  color: #2c2c2c !important;
+}
+
+.main {
+  text-align: center;
+  background-image: linear-gradient(
+      45deg,
+      rgba(19, 232, 241, 0.3019607843),
+      rgba(19, 232, 241, 0.3019607843)
+    ),
+    url(images/Image20230430153820.png);
+  background-size: cover;
+  padding: 6rem !important;
+  margin: 0 !important;
+}
+
+.main h1 {
+  font-size: 80px;
+  font-weight: bold;
+}
+
+.icons {
+  text-align: center;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1607843137);
+  direction: ltr;
+  padding: 8px;
+}
+
+.icons img {
+  height: 80px;
+  transition: 0.3s;
+}
+
+.icons img:hover {
+  scale: 1.1;
+}
+
+.project {
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e9e9e9;
+}
+
+.main-img {
+  width: 700px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.project-btn {
+  margin-top: 20px;
+  font-size: 1.2em;
+  border-radius: 30px;
+  padding: 6px 32px;
+  color: #000;
+  background-color: #0dcaf0;
+  border-color: #0dcaf0;
+}
+
+.project-btn a {
+  text-decoration: none;
+  color: #000;
+}
+
+#links {
+  display: flex;
+  background-color: #31d2f2;
+  text-align: center;
+  padding: 25px 0;
+  direction: ltr;
+}
+
+footer {
+  padding: 8px;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.col-sm-2 {
+  flex-direction: column;
+  display: flex;
+  gap: 9px;
+}
+
+.burger-menu {
+  width: 25px;
+  height: 20px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  top: 25px;
+  right: 15px;
+}
+
+.burger-menu div {
+  width: 100%;
+  height: 4px;
+  background-color: #333;
+}
+
+.burger-menu:hover div {
+  background-color: #555;
+}
+
+@media (max-width: 768px) {
+  .project .main-img {
+    width: 100%;
+  }
+
+  .burger-menu {
+    display: flex;
+  }
+
+  .navbar-nav {
+    display: none;
+  }
+}
+
+@media (max-width: 803px) {
+  .navbar-nav li {
+    margin: auto;
+  }
+}
