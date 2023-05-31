@@ -185,7 +185,7 @@ a {
       rgba(0, 0, 0, 0.4509803922),
       transparent
     ),
-    url(images/project-screenshots/Image20230502125311.png);
+    url(/images/project-screenshots/Image20230502125311.png);
   background-color: #3a3a3a;
   padding: 7em 5vw !important;
   margin: 0 !important;
@@ -244,11 +244,7 @@ footer {
 
 
 
-.mail{
-  height: 400px;
-  width: 400px;
-  background-image: url(/images/project-screenshots/Image20230502125311.png);
-}
+
 
 @media (max-width: 768px) {
   .navbar-nav {
