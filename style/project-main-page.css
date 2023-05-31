@@ -193,8 +193,6 @@ a {
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: revert;
-   
-  
 }
 #contact form {
   margin: 32px 0;
@@ -241,10 +239,6 @@ footer {
   display: flex;
   justify-content: space-between;
 }
-
-
-
-
 
 @media (max-width: 768px) {
   .navbar-nav {
