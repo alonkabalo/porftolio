@@ -81,7 +81,7 @@ button {
   font-weight: bold;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
   .background-div .myDiv {
     width: 80%;
     height: auto;
@@ -98,4 +98,4 @@ button {
   button {
     width: 30%;
   }
-}
+}/*# sourceMappingURL=project4.css.map */
