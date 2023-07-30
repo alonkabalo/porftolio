@@ -6,13 +6,17 @@ body {
   background-size: cover;
   background-attachment: fixed;
   text-align: center;
+  
+  
 }
+
 
 h1 {
   color: white;
   font-size: 60px;
   font-family: "Handjet", cursive;
   transform: translateY(-60px);
+  
 }
 
 #calc {
@@ -91,3 +95,4 @@ h1 {
 .spacer {
   padding: 60px;
 }
+
