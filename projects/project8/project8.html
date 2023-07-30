@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Snake</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../project8/style/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <script src="../project8/script/script.js" defer></script>
+</head>
+
+<body onload="createBoard()">
+    <div id="game-controls">
+        <button id="easy">Easy</button>
+        <button id="medium">Medium</button>
+        <button id="pro">Pro</button>
+    </div>
+    <div id="timer">Timer : 0 seconds</div>
+    <div class="frame">
+        <div class="board"></div>
+    </div>
+    <div id="score">Score: 0</div>
+    <div id="instructions">
+        <p>Use the Down key to start, then choose a difficulty</p>
+    </div>
+
+
+    <div id="gameOverModal" class="modal">
+        <div class="modal-content">
+            <p> 🐍 Better luck next time </p>
+            <button id="restartBtn">Restart Game</button>
+        </div>
+    </div>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap");
+
+html {
+  min-height: 100%;
+}
+
+body {
+  direction: rtl;
+  padding-bottom: 200px;
+  background-image: url(../images/cube.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+* {
+  font-family: "Oswald", sans-serif;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  margin: 16px;
+  font-size: 42px;
+}
+
+.frame {
+  text-align: center;
+  padding-top: 110px;
+}
+
+.board {
+  display: inline-grid;
+  overflow: hidden;
+  background-color: #e4e4e4;
+  gap: 6px;
+  padding: 6px;
+  border-radius: 12px;
+  direction: ltr;
+}
+
+.board div {
+  width: 100px;
+  height: 100px;
+  background-color: #733bd5de;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  font-weight: bold;
+  color: white;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.board div.option:not(.game-over div):hover {
+  scale: 1.05;
+  cursor: pointer;
+}
+
+.active {
+  background-color: #5919c7e2 !important;
+}
+
+@keyframes zoom-in {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1.4);
+  }
+}
+
+.winner {
+  font-size: 80px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: zoom-in 2s;
+}
+
+.bg {
+  background-color: #a4d967;
+}
+
+p {
+  text-align: center;
+  color: white;
+  font-size: 21px;
+}
+
+p .margin {
+  margin: 0 12px;
+}
+
+@media screen and (max-width: 460px) {
+  .board div {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+@media screen and (max-width: 410px) {
+  .board div {
+    width: 70px;
+    height: 70px;
+  }
+}
+@media screen and (max-width: 330px) {
+  .board div {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  .board div {
+    width: 45px;
+    height: 45px;
+    font-size: 22px;
+  }
+}

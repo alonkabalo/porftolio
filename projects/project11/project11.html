@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Task Management</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../project11/style/style.css">
+    <script src="../project11/script/main.js" defer></script>
+</head>
+
+<body>
+    <h1>Task Management </h1>
+
+    <div class="frame">
+        <header>
+            <input type="text" id="title" placeholder="Title">
+            <textarea id="description" placeholder="Description"></textarea>
+
+            <input type="date" id="dueDate" placeholder="Due Date">
+            <select id="status">
+                <option value="pending">Pending</option>
+                <option value="in progress">In Progress</option>
+                <option value="completed">Completed</option>
+            </select>
+            <select id="priority">
+                <option value="0">Low</option>
+                <option value="1">Medium</option>
+                <option value="2">High</option>
+            </select>
+            <button>Add</button>
+        </header>
+
+        <div class="tasks">
+
+        </div>
+    </div>
+</body>
+
+</html>

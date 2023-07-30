@@ -86,7 +86,12 @@ a.nav-link {
 
 .main-img {
   width: 700px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 20px; /* This will give your image rounded corners */
+  box-shadow: 0 10px 60px rgba(0,0,0,0.1); /* This will give a subtle shadow to your image */
+  transition: transform 0.2s ease-in-out; /* This will animate any transformations */  
+}
+.main-img:hover {
+  transform: scale(1.05); /* This will slightly enlarge the image when you hover over it */
 }
 
 .project-btn {
@@ -157,13 +162,9 @@ footer {
   .project .main-img {
     width: 100%;
   }
-
-  .main h1{
+  .main h1 {
     font-size: 55px;
   }
-  
-
-  
   .burger-menu {
     display: flex;
   }

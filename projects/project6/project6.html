@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Gallery</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../project6/style/style.css">
+    <script src="../project6/script/script.js" defer></script>
+    <script src="../project6/script/data.js" defer></script>
+</head>
+
+<body>
+
+
+
+    <div class="frame">
+        <div id="gallery" onmouseover="stopAuto()" onmouseout="startAuto()">
+            <img onclick="openModal()">
+        
+            <button id="right" onclick="prevImage()"><<</button>
+            <button id="left" onclick="nextImage()">>></button>
+        </div>
+        
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h2 id="modal-headline">Surf Spot </h2>
+                <p id="desc"></p>
+            </div>
+        </div>
+
+        <div id="floating-text">
+            <p>Click on an image to get information about the specific surf spot!</p>
+            <p>You can use the left and right arrows to navigate through the photos.</p><br>
+            </div>
+
+            <div id="levels">
+                <p>
+                    Levels<br>
+                    👶🏼 Beginner <br>
+                    🤙🏼 Intermediate<br>
+                    🏄🏼‍♂️ Advanced<br>
+                    🦈 Expert
+                </p>
+            </div>
+        
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,286 @@
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Noto+Sans+Cypro+Minoan&family=Raleway:wght@500;600&display=swap");
+
+html {
+  min-height: 100%;
+  overflow: hidden;
+}
+
+body {
+  direction: rtl;
+  box-sizing: border-box;
+  background-image: url(../images/snake.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  font-family: "Bree Serif", serif;
+  position: relative;
+}
+
+.frame {
+  width: 80%;
+  max-width: 1000px;
+  height: 100vh;
+  margin: auto;
+  padding: 8px 16px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+button {
+  background-color: #76bc279d;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 10px;
+  border: none;
+  display: block;
+  margin-bottom: 5px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #a4d967;
+}
+
+.board {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -55%);
+  align-self: center;
+  display: inline-grid;
+  border-radius: 3px;
+  border: 4px solid;
+  overflow: hidden;
+  background-image: url(../images/grass.jpg);
+  background-position: left;
+}
+
+.board div {
+  width: 12px;
+  height: 12px;
+}
+
+.active {
+  background-image: radial-gradient(#212121 20%, transparent 20%),
+    radial-gradient(#fafafa 20%, transparent 20%);
+  background-color: #0e9e01;
+  background-position: 0 0, 50px 50px;
+  background-size: 9px 9px;
+}
+
+.head.up {
+  border-radius: 12px 12px 0 0;
+}
+
+.head.right {
+  border-radius: 0 12px 12px 0;
+}
+
+.head.down {
+  border-radius: 0 0 12px 12px;
+}
+
+.head.left {
+  border-radius: 12px 0 0 12px;
+}
+
+.topLeftRadius {
+  border-radius: 12px 0 0 0;
+}
+
+.topRightRadius {
+  border-radius: 0 12px 0 0;
+}
+
+.bottomRightRadius {
+  border-radius: 0 0 12px 0;
+}
+
+.bottomLeftRadius {
+  border-radius: 0 0 0 12px;
+}
+
+.apple::after {
+  content: "🍎";
+  position: relative;
+  top: -7px;
+  right: -3px;
+  font-size: 11px;
+}
+
+#game-controls {
+  z-index: 1;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  display: flex;
+  flex-flow: row-reverse;
+  gap: 15px;
+}
+
+#timer {
+  width: 100%;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 53px;
+  font-weight: 350;
+  color: white;
+  text-align: center;
+}
+
+#instructions {
+  width: 100%;
+  position: absolute;
+  top: 17%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 30px;
+  font-weight: 100;
+  color: white;
+  text-align: center;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefeca;
+  font-size: 40px;
+  text-align: center;
+  margin: auto;
+  padding: 20px;
+  border: 5px solid #49d4129d;
+  border-radius: 20px;
+  width: 80%;
+  max-width: 600px;
+  box-sizing: border-box;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-out;
+}
+.modal-content button {
+  display: block;
+  width: 300px;
+  margin: 20px auto;
+  padding: 10px;
+  font-size: 40px;
+  text-align: center;
+  background-color: #2f49129d;
+  color: white;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+.modal-content button:hover {
+  background-color: #a4d967;
+}
+
+.modal-content.out {
+  transform: translateY(-100%);
+  transition: transform 0.2s ease-in;
+}
+
+#score {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 53px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  text-shadow: -1px -1px 0 #000, 3px -3px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+@media screen and (max-width: 1300px) {
+  .board div {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  #timer {
+    top: 15%;
+    font-size: 40px;
+  }
+
+  button {
+    font-size: 25px;
+    padding: 10px 15px;
+  }
+
+  .board div {
+    width: 10px;
+    height: 10px;
+  }
+
+  #instructions {
+    font-size: 24px;
+    width: 100%;
+    padding-top: 20px;
+  }
+  #score {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .frame {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  #game-controls button {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .board div {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .board div {
+    width: 8px;
+    height: 8px;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .board div {
+    width: 6px;
+    height: 6px;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  .board div {
+    width: 4px;
+    height: 4px;
+  }
+}
